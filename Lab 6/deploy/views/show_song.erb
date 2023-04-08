@@ -1,0 +1,14 @@
+<h1><%= @song.title %>
+</h1><p>Release Date: <%= @song.release.strftime("%e %B %Y") if @song.release %></p>
+
+<p>Length: <%= @song.length/60 %> minutes <%= @song.length%60 %> seconds</p>
+
+<pre><%= @song.lyrics %></pre>
+<p><a href="/songs">back to songs index</a></p>
+
+<p><a href="/songs/<%= @song.id %>/edit">edit this song</a></p>
+
+<form action="/songs/<%= @song.id %>" method="POST">
+<input name="_method" type="hidden" value="DELETE" />
+<input type="submit" value="delete this song" />
+</form>

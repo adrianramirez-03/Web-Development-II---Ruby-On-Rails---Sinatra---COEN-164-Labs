@@ -1,0 +1,5 @@
+<input name="song[title]" type="text" value="<%= @song.title %>" />
+<input name="song[length]" type="number" value="<%= @song.length %>" />
+<input name="song[release]" type="text" value="<%= @song.release if @song.release %>" />
+<textarea name="song[lyrics]"><%= @song.lyrics %></textarea>
+<input type="submit" value="Save Song" />

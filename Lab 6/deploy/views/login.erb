@@ -1,0 +1,12 @@
+<h1>Please logon</h1>
+<% if session[:loginfailmessage] %>
+<h2> <%=session[:loginfailmessage]%></h2>
+<% session[:loginfailmessage] = nil %>
+<% end %>
+
+<form action="/login" method='post'>
+      username: <input type='text' name='username'></input><br>
+      password: <input type='text' name='password'></input>
+      <br>
+      <input type='submit' name='submit'></input>
+</form>

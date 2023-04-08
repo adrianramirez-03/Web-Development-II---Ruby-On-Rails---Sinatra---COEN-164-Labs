@@ -1,0 +1,16 @@
+<h1>Songs</h1>
+
+
+<% if @songs.any? %>
+<ul>
+<% @songs.each do |song| %>
+<li><%= song.title %></li><br>
+<% end %></ul>
+<% else %>
+<p>No songs have been created yet!</p>
+<% end %>
+
+<br><br>
+<form method='get' action='/songs/new'>
+    <input type="submit" value="Create Song" />
+</form>
